@@ -279,3 +279,4 @@ cc/static/webpack_bundles/
 webpack-stats.json
 .env
 .envs/*
+!.envs/.local/
