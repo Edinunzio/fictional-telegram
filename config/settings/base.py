@@ -69,6 +69,8 @@ DJANGO_APPS = [
     # "django.contrib.humanize", # Handy template tags
     "django.contrib.admin",
     "django.forms",
+    "django_htmx",
+    "django_htmx_refresh",
 ]
 THIRD_PARTY_APPS = [
     "crispy_forms",
@@ -85,6 +87,7 @@ THIRD_PARTY_APPS = [
 
 LOCAL_APPS = [
     "cc.users",
+    "client_relationship_manager",
     # Your stuff: custom apps go here
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -127,6 +130,10 @@ AUTH_PASSWORD_VALIDATORS = [
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 
+HTMX_APPS = [
+    "crm",
+]
+
 # MIDDLEWARE
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#middleware
@@ -141,6 +148,8 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "allauth.account.middleware.AccountMiddleware",
+    "django_htmx.middleware.HtmxMiddleware",
+    "django_htmx_refresh.middleware.HtmxResponseMiddleware",
 ]
 
 # STATIC

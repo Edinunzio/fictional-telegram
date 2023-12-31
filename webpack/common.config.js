@@ -8,12 +8,10 @@ module.exports = {
   entry: {
     project: path.resolve(__dirname, '../cc/static/js/project'),
     vendors: path.resolve(__dirname, '../cc/static/js/vendors'),
+    htmx: path.resolve(__dirname, '../cc/static/js/htmx.min'),
   },
   output: {
-    path: path.resolve(
-      __dirname,
-      '../cc/static/webpack_bundles/',
-    ),
+    path: path.resolve(__dirname, '../cc/static/webpack_bundles/'),
     publicPath: '/static/webpack_bundles/',
     filename: 'js/[name]-[fullhash].js',
     chunkFilename: 'js/[name]-[hash].js',
